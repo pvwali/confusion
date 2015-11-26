@@ -1,0 +1,156 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container col-xs-12 col-sm-offset-2 col-sm-5">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" style="color: #5bc0de;" data-toggle="collapse" data-target="#navbar-login" 
+                aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle Login</span>
+                    <span class="fa fa-sign-in fa-lg"></span>            
+            </button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a href="index.html"><img src="img/logo.jpg" class="img-rounded" width="100%" height="100%"></a>
+            </div>           
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li id="menu-item-home"><a href="index.html"><span class="glyphicon glyphicon-home"
+                     aria-hidden="true"></span> Home</a></li>
+                <li id="menu-item-about"><a href="aboutus.html"><i class="fa fa-info-circle"></i> About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                     role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="glyphicon glyphicon-list"
+                     aria-hidden="true"></span>
+                     Menu <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Appetizers</a></li>
+                        <li><a href="#">Main Courses</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Drinks</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Specials</li>
+                        <li><a href="#">Lunch Buffet</a></li>
+                        <li><a href="#">Weekend Brunch</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactus.html"><i class="fa fa-user"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-5">
+        <div id="navbar-login" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="login">
+              <div id="login-form" class="form-group">
+                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Password">
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="approve">
+                    <strong>Remember me</strong>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-info">Sign-in</button>
+            </form>
+        </div>
+    </div>
+
+</nav>
+
+<header class="jumbotron">
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <h1>Ristorante con Fusion</h1>
+                <p style="padding:10px;"></p>
+                <p class="lead">We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <img src="img/logo.jpg" class="img-responsive img-rounded">
+                <span style="padding: 2px;"></span>
+                <button type="button" class="btn btn-success btn-block" 
+                    data-toggle="modal" data-target="#reserve">Reserve</button>
+            </div>
+        </div>
+
+        <!-- Reservation -->
+        <div id="reserve" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Reserve your table</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Reservation form -->
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="control-label col-xs-3 col-sm-2" for="noOfGuests">Number of Guests</label>
+                                <div class="col-xs-9 col-sm-10">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests1" value="1"> 1
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests2" value="2"> 2
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests3" value="3"> 3
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests4" value="4"> 4
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests5" value="5"> 5
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="noOfGuests" id="noOfGuests6" value="6"> 6
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3 col-sm-2" for="noOfGuests">Date and Time</label>
+                                <div class="inner-addon left-addon col-xs-9 col-sm-5">
+                                    <i class="fa fa-calendar"></i>
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>
+                                <div class="inner-addon left-addon col-xs-offset-3 col-xs-9 col-sm-offset-0 col-sm-5">
+                                    <i class="fa fa-clock-o"></i>
+                                    <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-offset-3 col-xs-4 col-sm-offset-2 col-sm-2">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-danger " data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <strong>Warning!</strong> Please <a type="text" href="tel:+0000000000"><i class="fa fa-phone"></i> Call</a> us to reserve for more than six guests.
+                        </div>
+
+                    </div>
+<!--                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- highlight the menu item -->
+<script>
+    $("#menu-item-"+$("#header").attr("pid")).attr("class","active");
+</script>
