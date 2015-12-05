@@ -87,6 +87,7 @@ body{
 
 .carousel {
     margin: 20px;
+    background: #1A237E;
 }
 .carousel-inner > .item > .item-container {
     float: left;
@@ -138,3 +139,31 @@ body{
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin: 0px -13px;
+}
+
+.nav-tabs {
+    padding-left: 2px;
+}
+
+.xtra-row-content {
+    padding: 30px 0px 30px 0px;
+}
+
+.affix {
+    top:90px;
+}
+
+#btn-section > label {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+#btn-section > .active {
+    box-shadow: 2px 5px 5px black;
+}
