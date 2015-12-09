@@ -1,1 +1,5 @@
-*_log
+*_log*
+js/
+fonts/
+css/
+!css/mystyles.css

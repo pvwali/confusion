@@ -2,6 +2,8 @@
 bower install
 
 # move the dependcies to project folder
+mkdir js
+mkdir fonts
 
 # jquery
 mv bower_components/jquery/dist/*.js js 

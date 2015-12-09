@@ -1,0 +1,175 @@
+.row-header{
+    margin:0px auto;
+    padding:auto auto;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 30px 0px 30px 10px;
+    border-bottom: 1px ridge;
+    min-height:150px;
+}
+
+.row-sub-content {
+	margin:10px 10px;
+    min-height:110px;
+}
+
+.row-footer{
+    background-color: #AfAfAf;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #7986CB ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-inverse {
+     background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+    color:#000000;
+}
+
+.navbar-brand {
+    padding: 10px 6px;
+}
+
+.btn-contact-group {
+	margin:10px auto;
+}
+
+.btn-contact-group > a:hover {
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.map {
+	width: 400px;
+    height: 300px;
+    background-color: #CCC;
+}
+
+.carousel {
+    margin: 20px;
+    background: #1A237E;
+}
+.carousel-inner > .item > .item-container {
+    float: left;
+    margin-right: 1px;
+    width: 33%
+}
+.carousel-inner > .item > .item-container > img {
+    width: 100%;
+    margin: auto;
+}
+
+#login-form {
+    margin-right: 5px;
+}
+
+#login-form > label {
+    color: #9d9d9d;
+}
+
+#login-form > label:hover {
+    color: #fff;
+}
+
+.modal-title {
+    color: #0f0f0f;
+}
+.modal-body > form {
+    color: #0f0f0f;
+    font-size: 80%;
+    margin-left: 15px;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .fa {
+  position: absolute;
+  padding: 12px 20px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .fa  { left:  0px;}
+.right-addon .fa { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin: 0px -13px;
+}
+
+.nav-tabs {
+    padding-left: 2px;
+}
+
+.xtra-row-content {
+    padding: 30px 0px 30px 0px;
+}
+
+.affix {
+    top:90px;
+}
+
+#btn-section > label {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+#btn-section > .active {
+    box-shadow: 2px 5px 5px black;
+}
+
+#carouselButtons {
+    right:0px;
+    position: absolute;
+    top: 0px;
+}
