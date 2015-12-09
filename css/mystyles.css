@@ -167,3 +167,9 @@ body{
 #btn-section > .active {
     box-shadow: 2px 5px 5px black;
 }
+
+#carouselButtons {
+    right:0px;
+    position: absolute;
+    top: 0px;
+}
