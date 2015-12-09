@@ -10,3 +10,9 @@ Ref: http://www.botskool.com/geeks/tinyweb-smallest-web-server-windows
 
 Cool icons
 http://glyphsearch.com/?query=smoking
+
+
+# Installation
+- Install npm
+- Install bower
+- Run setup

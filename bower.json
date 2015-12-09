@@ -1,0 +1,29 @@
+{
+  "name": "confusion",
+  "homepage": "https://github.com/pvwali/confusion",
+  "authors": [
+    "pwali <pvwali@yahoo.com>"
+  ],
+  "description": "confusion ristorante",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "confusion",
+    "coursera",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ionicons": "ionicons#~2.0.1",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0",
+    "bootstrap-social": "~4.11.0"
+  }
+}
