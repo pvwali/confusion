@@ -22,6 +22,8 @@ mv bower_components/font-awesome/fonts/* fonts
 mv bower_components/Ionicons/css/*.css css
 mv bower_components/Ionicons/fonts/* fonts
 
+# angular
+mv bower_components/angular/angular.min.js js
 
 # clean-up
 rm -r bower_components

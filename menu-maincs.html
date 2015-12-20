@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="confusionApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+
+    <title>Ristorante Con Fusion</title>
+    <link rel="icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+      <link href="css/bootstrap-social.css" rel="stylesheet">
+      <link href="css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/ionicons.min.css" rel="stylesheet">    
+
+  </head>
+
+  <body ng-controller="MenuController as menuCtlr">
+    <!-- include header -->
+    <div id="header" pid="menu"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="#">Menu</a></li>
+                   <li class="active">Main Courses</li>
+               </ul>
+           </div>
+           <div class="col-xs-12">
+               <h3>Main Courses</h3>
+               <hr>
+           </div>
+       </div>
+
+       <div class="row">
+        <div class="col-xs-12 row-content">
+            <div id="menu-items">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ng-class="{active:menuCtlr.isSelected(1)}">
+                        <a href="#menu-items" ng-click="menuCtlr.select(1)" aria-controls="All" role="tab">All</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:menuCtlr.isSelected(2)}">
+                        <a href="#menu-items" ng-click="menuCtlr.select(2)" aria-controls="Main" role="tab">Main</a>
+                    </li>
+                    <li role="presentation" ng-class="{active:menuCtlr.isSelected(3)}">
+                        <a href="#menu-items" ng-click="menuCtlr.select(3)" aria-controls="Appetizers" role="tab">Appetizers</a>
+                    </li>   
+                    <li role="presentation" ng-class="{active:menuCtlr.isSelected(4)}">
+                        <a href="#menu-items" ng-click="menuCtlr.select(4)" aria-controls="Deserts" role="tab">Desserts</a>
+                    </li> 
+                    <li role="presentation" ng-class="{active:menuCtlr.isSelected(5)}">
+                        <a href="#menu-items" ng-click="menuCtlr.select(5)" aria-controls="Drinks" role="tab">Drinks</a>
+                    </li>
+                </ul>
+                <div class="tab-content">                    
+                    <div class="media tab-pane fade in active" ng-repeat="dish in menuCtlr.dishes | filter:menuCtlr.filtText">
+                        <div class="media-left media-middle">
+                            <a href="#" class="img-circle">
+                                <img class="media-object"
+                                src="{{dish.image}}" alt="{{dish.alt}}">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">{{dish.name}}
+                                <span class="label label-danger">{{dish.label}}</span>
+                                <span class="badge">{{dish.price | currency}}</span>
+                            </h2>                        
+                            <h4>{{dish.title}}</h4>
+                            <p>{{dish.description}}</p>
+                            <p><a class="btn btn-primary btn-xs" data-toggle="collapse"
+                                href="#{{dish.id}}" aria-expanded="false" aria-controls="more">More &raquo;</a></p>
+                        </div>
+                        <div id="{{dish.id}}" role="tabpanel" class="panel-collapse collapse">
+                            <div class="panel-body" style="padding: 5px;">
+                                <form id="comment-form" class="form-horizontal" role="form" ng-submit="menuCtlr.addComment()">
+                                    <div class="col-xs-12 col-sm-1">
+                                        <label>User Comment 
+                                            <a href="#comments-search-{{dish.id}}" data-toggle="collapse"
+                                                aria-expanded="false" aria-controls="more">
+                                                <i class="glyphicon glyphicon-option-horizontal"></i>
+                                            </a></label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7">
+                                        <input type="text" class="form-control" ng-model="menuCtlr.comment.text"
+                                        placeholder="Enter your comment">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-2">
+                                        <input type="text" class="form-control" ng-model="menuCtlr.comment.by"
+                                        placeholder="Enter your name">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-2">
+                                        <button class="btn btn-primary btn-sm" type="submit" 
+                                            ng-click="menuCtlr.dish.id=dish.id; menuCtlr.comment.likes=true;">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-sm" type="submit"
+                                            ng-click="menuCtlr.dish.id=dish.id; menuCtlr.comment.likes=false;">
+                                            <i class="fa fa-thumbs-o-down"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="comments-search-{{dish.id}}" class="collapse">
+                                <div id="comments-search-by" class="alert">
+                                    <input type="text" class="col-xs-12 col-sm-2" ng-model="menuCtrl.filterText" placeholder="filter text">
+                                    <input type="text" class="col-xs-12 col-sm-3" ng-model="menuCtrl.orderby" 
+                                        placeholder="order by [-][date, likes, by]">
+                                </div>
+                            </div>
+                            <div id="comments-view" class="col-xs-12 col-sm-5" 
+                                ng-repeat="comment in dish.comments | filter:menuCtrl.filterText | orderBy:menuCtrl.orderby">
+                                <blockquote class="likes-{{comment.likes}}">
+                                    <p>{{comment.text}}</p>
+                                    <footer><i>{{comment.by}}; {{comment.date}}</i></footer>
+                                </blockquote>
+                            </div>                            
+                        </div>
+                    </div>   
+                </div>         
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- include footer -->
+<div id="footer"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+
+<script src="js/menu-maincs.js"></script>
+<!-- Include common header/footer -->
+<script>
+$(document).ready(function() {
+    $("#footer").load("footer.html");
+    $("#header").load("header.html");
+});
+</script>
+
+</body>
+
+</html>    

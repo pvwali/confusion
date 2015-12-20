@@ -173,3 +173,48 @@ body{
     position: absolute;
     top: 0px;
 }
+
+#menu-items > .tab-content {
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+#menu-items > .tab-content > .tab-pane {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#comment-form > div {
+    padding-top: 5px;
+}
+
+#comments-view {
+    display: inline-block;
+    padding-top: 3px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+#comments-view > blockquote {
+    font-size: inherit;
+    padding: 2px  12px;
+    margin-bottom: 10px;
+}
+
+#comments-view > .likes-true {
+    border-color: #286091;
+}
+
+#comments-view > .likes-false {
+    border-color: #C63531;
+}
+
+#comments-search-by {
+    padding: 0px 0px 35px 0px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#comments-search-by > input {
+    margin-right: 10px; 
+}
