@@ -116,9 +116,17 @@
                             </div>
                             <div id="comments-search-{{dish.id}}" class="collapse">
                                 <div id="comments-search-by" class="alert">
-                                    <input type="text" class="col-xs-12 col-sm-2" ng-model="menuCtrl.filterText" placeholder="filter text">
-                                    <input type="text" class="col-xs-12 col-sm-3" ng-model="menuCtrl.orderby" 
-                                        placeholder="order by [-][date, likes, by]">
+                                    <div class="col-xs-12 col-sm-1">
+                                        <label>Comment Filters</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="text" class="form-control" ng-model="menuCtrl.filterText" 
+                                            placeholder="filter text">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3">
+                                        <input type="text" class="form-control" ng-model="menuCtrl.orderby" 
+                                            placeholder="order by [-][date, likes, by]">
+                                    </div>
                                 </div>
                             </div>
                             <div id="comments-view" class="col-xs-12 col-sm-5" 
